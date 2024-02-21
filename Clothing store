@@ -1,0 +1,46 @@
+/** CLothing_Store
+Sweaters (12, 48, 1)
+Shirt (20, 25, 2)
+Pants (20, 35, 3)
+Ties (8, 12, 1)
+Boxers (12, 12, 4)
+Briefs (12, 12, 4)
+Hats (6, 20, 1)
+Sunglasses (12, 15, 1)
+Bracelets (10, 65, 1)
+Necklaces (10, 85, 1)
+Rings (12, 45, 1)
+Jacket (20, 35, 2)
+Polos (12, 45, 2)
+Thermals (6, 25, 4)
+Earrings (12, 30, 1)
+**/
+
+CREATE TABLE clothing_store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, aisle INTEGER);
+
+INSERT into clothing_store VALUES (1,"Sweaters", 12, 48, 1);
+INSERT into clothing_store VALUES (2, "Shirt", 20, 25, 2);
+INSERT into clothing_store VALUES (3, "Pants", 20, 35, 3);
+INSERT into clothing_store VALUES (4, "Ties", 8, 12, 1);
+INSERT into clothing_store VALUES (5, "Boxers", 12, 12, 4);
+INSERT into clothing_store VALUES (6, "Briefs", 12, 12, 4);
+INSERT into clothing_store VALUES (7, "Hats", 6, 20, 1);
+INSERT into clothing_store VALUES ( 8, "Sunglasses", 12, 15, 1);
+INSERT into clothing_store VALUES (9, "Bracelets", 10, 65, 1);
+INSERT into clothing_store VALUES (10, "Necklaces", 10, 85, 1);
+INSERT into clothing_store VALUES (11, "Rings", 12, 45, 1);
+INSERT into clothing_store VALUES (12, "Jacket", 20, 35, 2);
+INSERT into clothing_store VALUES (13, "Polos", 12, 45, 2);
+INSERT into clothing_store VALUES (14, "Thermals", 6, 25, 4);
+INSERT into clothing_store VALUES(15, "Earrings", 12, 30, 1);
+
+SELECT * FROM clothing_store;
+
+SELECT * FROM clothing_store WHERE aisle >2; 
+
+SELECT * FROM clothing_store WHERE price < 35;
+SELECT * FROM clothing_store ORDER BY price; 
+
+SELECT MAX(price) AS total_dollars FROM clothing_store;
+
+SELECT AVG(price) FROM clothing_store
