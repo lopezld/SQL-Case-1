@@ -1,0 +1,50 @@
+CREATE TABLE famous_people (id INTEGER PRIMARY KEY, 
+name TEXT, 
+films TEXT, 
+partner TEXT,
+occupation INTEGER);
+
+INSERT INTO famous_people VALUES (1,"Reese Witherspoons", "Legally Blonde, Wild, Sweet Home Alabama", "Jim Toth", 1);
+INSERT INTO famous_people VALUES (2, "Laura Dern", "Jurassic Park, Little Women, Marriage Story", "Ben Harper", 1);
+INSERT INTO famous_people VALUES (3, "Ben Stiller", "Night at the Museum, Zoolander, Meet the Fockers", "Christine Taylor", 1);
+INSERT INTO famous_people VALUES (4, "Christan Bale", "Batman Begins, American Psycho, The Prestige", "Sibi Blazic", 1);
+INSERT INTO famous_people VALUES (5, "Michael Cain", "Dark Knight, Miss Congeniality, Now You See Me", "Shakira Cain", 1);
+INSERT INTO famous_people VALUES (6, "Tom Hanks", "Castaway, Forrest Gump, Toy Story", "Rita Wilson", 1);
+INSERT INTO famous_people VALUES (7, "Rita Wilson", "Sleepless in Seattle, Jingle all the way, A Man called Otto", "Tom Hanks", 1);
+INSERT INTO famous_people VALUES (8, "Blake Lively", "Sister of the Traveling Pants, A Simple Favor, Age of Adeline", "Ryan Reynolds", 1);
+INSERT INTO famous_people VALUES (9, "Ryan Reynolds", "The Proposal, Deadpool, Wolverin Origins, Green Lantern", "Blake Lively", 1);
+INSERT INTO famous_people VALUES (10, "Ben Affleck", "Jersey Girl, Gone Girl, Justice Leauge", "Jennifer Lopez", 1);
+INSERT INTO famous_people VALUES (11, "Jennifer Lopez", "Enough, Hustlers, Maid in Manhattan", "Ben Affleck", 2);
+INSERT INTO famous_people VALUES (12, "John Legend", "La La Land", "Chrissy Tiegen", 2);
+INSERT INTO famous_people VALUES (13, "Chrissy Tiegen", NULL, "John Legend", 3);
+INSERT INTO famous_people VALUES (14, "Justin Timberlake", "Trolls", "Jessica Biel", 2);
+INSERT INTO famous_people VALUES (15, "Jessica Biel", "Texas Chainsaw Massacre", "Justin Timberlake", 1);
+INSERT INTO famous_people VALUES (16, "Sophie Turner", "Do Bad", "Joe Jonas", 1);
+INSERT INTO famous_people VALUES (17, "Joe Jonas", "Camp Rock", "Sophie Turner", 2);
+INSERT INTO famous_people VALUES (18, "Nicole Kidman", "Moulin Rogue, Paddington", "Keith Urban", 1);
+INSERT INTO famous_people VALUES (19, "Katherine Heigel", "Knocked Up, 27 Dresses", "Josh Kelley", 1);
+INSERT INTO famous_people VALUES (20, "Matthew McConaughey", "The Wedding Planner, Dallas Buyers Club", "Camila ALvez", 1);
+INSERT INTO famous_people VALUES (21, "Karlie Kloss", NULL, "Joshua Kushner", 3);
+INSERT INTO famous_people VALUES (22, "Giselle Bundchen", "The Devil Wears Prada", "Tom Brady", 3);
+INSERT INTO famous_people VALUES (23, "Gigi Hadid", NULL, "Zayn Malik", 3);
+INSERT INTO famous_people VALUES (24, "Joshua Kelley", NULL, "Katherine Heigel", 2);
+INSERT INTO famous_people VALUES (25, "Victoria Bekcham", "Spice World", "David Beckham", 2);
+INSERT INTO famous_people VALUES (26, "David Beckham", NULL, "Victoria Bekcham", 4);
+INSERt INTO famous_people VALUES (27, "Ciara", "All You've Got, The Color Purple", "Russell Wilson", 2);
+INSERT INTO famous_people VALUES (28, "Russell Wilson", NULL, "Ciara", 4);
+INSERT INTO famous_people VALUES (29, "Tom Brady", "Ted 2, 80 for Brady", "Giselle Bundchen", 4);
+INSERT INTO famous_people VALUES (30, "Taylor Swift", "Valentine's Day", "Travis Kelce", 2);
+INSERT INTO famous_people VALUES (31, "Travis Kelce", NULL, "Taylor Swift", 4);
+
+CREATE TABLE Profession (id INTEGER PRIMARY KEY, title TEXT);
+
+INSERT INTO Profession VALUES (1, "Actor");
+INSERT INTO Profession VALUES (2, "Singer");
+INSERT INTO Profession VALUES (3, "Model");
+INSERT INTO Profession VALUES (4, "Athlete");
+
+What are their occupations?
+
+SELECT FP.name, title from Famous_People AS FP
+JOIN Profession AS P
+ON fp.occupation = P.id ORDER BY title;
